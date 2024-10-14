@@ -14,8 +14,24 @@ public class EcomSpringBootApplication {
 		return "Ecommerce SpringBoot.....";
 	}
 
+	@GetMapping("/welcome")
+	public String data(){
+		return "Ecommerce SpringBoot.....";
+	}
+
 	public static void main(String[] args) {
 		SpringApplication.run(EcomSpringBootApplication.class, args);
 	}
 
 }
+//stage('push image to hub'){
+//	steps{
+//		script{
+//			withCredentials([string(credentialsId: 'dockerhubpwd', variable: 'DOCKERHUB_PASSWORD')]) {
+//
+//				bat "docker login -u daramallapavan -p ${DOCKERHUB_PASSWORD}"
+//			}
+//			bat 'docker push daramallapavan/ecom-springboot'
+//		}
+//	}
+//}
